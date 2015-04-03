@@ -12,7 +12,7 @@ var dbTestObject = new DatabaseService();
 describe('PaymentService', function() {
     describe('Validate Client Data', function() {
         it('should return true with valid card data', function() {
-            assert(paymentTestObject.validateClientData(testData.valid_onClient_invalidPayment));
+            assert(paymentTestObject.validateClientData(testData.validClientInvalidPayment));
         });
         it('should return false with invalid card data', function() {
             assert.equal(paymentTestObject.validateClientData(testData.invalidCreditCard), false);

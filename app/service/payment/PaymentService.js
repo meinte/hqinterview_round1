@@ -79,6 +79,7 @@ PaymentService.prototype.initializeAllPlugins = function() {
 //initial check of data, not thorough, just a double check in case client did not check data,
 //in the end the creditcard vendor itself will catch any errors
 PaymentService.prototype.validateClientData = function(paymentTransactionVO) {
+    if(!paymentTransactionVO)return false;
     function checkCurrency() {
         var validCurrencies = ['USD', 'EUR', 'THB', 'HKD', 'SGD', 'AUD'];
         var isValid = validCurrencies.indexOf(paymentTransactionVO.currency) > -1;

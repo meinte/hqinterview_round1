@@ -1,6 +1,6 @@
 var PaymentTransactionVO = require('../../service/payment/vo/PaymentTransactionVO.js');
 module.exports = {
-    "validClientData": new PaymentTransactionVO({
+    "validClientInvalidPayment": new PaymentTransactionVO({
         amount_of_money: '1',
         currency: 'USD',
         first_name: 'us',
