@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <title>HotelQuickly test</title>
+    <meta charset="UTF-8" />
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <!-- styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- javascript -->
+    <script src='js/tools.js' defer></script>
+    <script src='js/main.js' defer></script>
+</head>
+
+<body onload='init()'>
+    <div id='main'>
+        <img src='img/logo.png' alt='HelloMeinte logo' />
+        <div class='bordered_box'>
+            <p>Below you will find the paypal test, please let me know if you have any questions</p>
+            <select id='test_values'>
+                <option value="" disabled selected>Testdata loading..Please wait</option>n>
+            </select>
+        </div>
+        <form id='main_form'>
+            <input type='text' name='amount_of_money' placeholder='Amount of money'>
+            <div class='select'>
+                <select name="currency">
+                    <option value="" disabled selected>Select your currency</option>
+                    <option value="USD">U.S. Dollar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="THB">Thai Bhat</option>
+                    <option value="HKD">Hong Kong Dollar</option>
+                    <option value="SGD">Singapore Dollar</option>
+                    <option value="AUD">Australian Dollar</option>
+                </select>
+            </div>
+            <input type='text' name='first_name' placeholder='First Name'>
+            <input type='text' name='last_name' placeholder='Last Name'>
+            <hr>
+            <div class='select'>
+                <select name="card_type">
+                    <option value="" disabled selected>Select your credit card</option>
+                    <option value='visa'>Visa</option>
+                    <option value='amex'>American Express</option>
+                    <option value='mastercard'>MasterCard</option>
+                    <option value='discover'>Discover</option>
+                </select>
+            </div>
+            <div class='expiry'>
+                <span>Expiry</span>
+                <div class='select'>
+                    <select name="expiry_month">
+                        <option value="" disabled selected>Month</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10</option>
+                        <option value='11'>11</option>
+                        <option value='12'>12</option>
+                    </select>
+                </div>
+                <input type='text' name='expiry_year' placeholder='Expiry Year'>
+            </div>
+            <input type='text' name='card_name' placeholder='Name on Card'>
+            <input type='text' name='card_number' placeholder='Credit Card Number'>
+            <input type='text' name='cvv' placeholder='CVV' maxlength="3">
+            <button id='submit_btn' name='button' form='main_form' type='submit'>Submit</button>
+        </form>
+    </div>
+    <div id='waiting_screen' class='hidden'>
+        <div class="content">
+            <p id='result'>LOADING, PLEASE WAIT</p>
+            <a href='#' id='done_button' class='hidden'>DONE</a>
+        </div>
+    </div>
+</body>
+</html>
