@@ -1,7 +1,7 @@
 {
     "name": "hqinterview_round1",
     "version": "0.0.1",
-    "description": "",
+    "description": "round 1 interview test",
     "main": "./app/app.js",
     "dependencies": {
         "braintree": "~1.23.0",
@@ -14,7 +14,7 @@
     },
     "scripts": {
         "test": "mocha test"
-    }
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/meinte/hqinterview_round1.git"
