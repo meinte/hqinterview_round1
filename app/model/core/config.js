@@ -1,5 +1,7 @@
 module.exports={
-	connectionString:"mongodb://hq_test:hq_test@dharma.mongohq.com:10020/mdb",
+	port:8080,
+        host:'localhost',
+        connectionString:"mongodb://hq_test:hq_test@dharma.mongohq.com:10020/mdb",
 	brainTreeInit:{
         merchantId: '5t68n4nby2pvjmkn',
         publicKey: '7bqbz9gmtv2f8yjp',

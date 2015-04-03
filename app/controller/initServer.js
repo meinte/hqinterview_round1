@@ -1,8 +1,10 @@
 module.exports.execute=function(server){
+	var config = require('../model/core/config.js')
 	server.connection({ 
-	    host: 'localhost', 
-	    port: 8080
+	    host: config.host, 
+	    port: config.port
 	});
+	console.log('visit http://'+config.host+":"+config.port+"/");
 
 
 }
