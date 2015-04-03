@@ -40,10 +40,10 @@ PaypalRestPlugin.prototype.doPayment = function(paymentTransactionVO, callback) 
         }]
     };
     this.paypal.payment.create(create_payment_json, null, function(error, payment) {
-        console.log("paypal error:")
+        /*console.log("paypal error:")
         console.log(error);
         console.log("paypal payment: ");
-        console.log(payment);
+        console.log(payment);*/
         var friendlyError=null;
         if(error){
             friendlyError={};

@@ -16,10 +16,10 @@ BraintreePlugin.prototype.doPayment = function(paymentTransactionVO,callback) {
             expirationYear: tVO.expiryYear
         }
     }, function(err, result) {
-        console.log("braintree error: ");
+        /*console.log("braintree error: ");
         console.log(err);
         console.log("braintree result: ");
-        console.log(result);
+        console.log(result);*/
         if(result.success==false){
             callback(new Error(result.message),null);
             return;

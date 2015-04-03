@@ -12,7 +12,7 @@ var dbTestObject = new DatabaseService();
 describe('PaymentService', function() {
     describe('Validate Client Data', function() {
         it('should return true with valid card data', function() {
-            assert(paymentTestObject.validateClientData(testData.validClientData));
+            assert(paymentTestObject.validateClientData(testData.valid_onClient_invalidPayment));
         });
         it('should return false with invalid card data', function() {
             assert.equal(paymentTestObject.validateClientData(testData.invalidCreditCard), false);
@@ -55,7 +55,7 @@ describe('PaymentService', function() {
                 done();
             });
         });
-        it.only('should do a braintree payment without error', function(done) {
+        it('should do a braintree payment without error', function(done) {
             this.timeout(50000);
             paymentTestObject.doPayment(testData.braintreeData, function(error, result) {
                 if (error) throw error;
